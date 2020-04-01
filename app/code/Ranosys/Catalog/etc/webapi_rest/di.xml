@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Model\Category\Tree" type="Ranosys\Catalog\Model\Category\Tree"/>
+    <preference for="Ranosys\Catalog\Api\Data\CategoryTreeInterface" type="Ranosys\Catalog\Model\Category"/>
+    <preference for="Ranosys\Catalog\Api\CategoryManagementInterface" type="Ranosys\Catalog\Model\CategoryManagement"/>
+    <preference for="Ranosys\Catalog\Api\ProductListInterface" type="Ranosys\Catalog\Model\ProductList"/>
+    <preference for="Ranosys\Catalog\Api\ProductDataInterface" type="Ranosys\Catalog\Model\ProductList"/>
+    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="afterproductget" type="Ranosys\Catalog\Plugin\ProductRepositoryPlugin" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <plugin name="aftergetavailablelimit" type="Ranosys\Catalog\Plugin\Block\Product\ProductList\Toolbar"/>
+    </type>
+    <type name="Magento\Catalog\Model\ProductLink\Repository">
+        <plugin name="aftergetlist" type="Ranosys\Catalog\Plugin\Model\ProductLink\RepositoryPlugin"/>
+    </type>
+    <preference for="Magento\Catalog\Model\Layer\FilterableAttributeListInterface"
+                type="Magento\Catalog\Model\Layer\Category\FilterableAttributeList" />
+     
+    <type name="Ranosys\Catalog\Model\ProductList">
+        <arguments>
+            <argument name="filterList" xsi:type="object">categoryFilterList</argument>
+        </arguments>
+    </type>
+</config>

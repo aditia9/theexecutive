@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="ranosys_abandoned_cart" instance="Ranosys\AbandonedCart\Cron\Abandonedcart" method="execute">
+            <config_path>abandonedcart/email_cron/cron_schedule</config_path>
+        </job>
+        <job name="ranosys_abandoned_cart_clear" instance="Ranosys\AbandonedCart\Cron\ClearAbandonedcart" method="execute">
+            <config_path>abandonedcart/clearcart_cron/cron_schedule</config_path>
+        </job>
+    </group>
+</config>

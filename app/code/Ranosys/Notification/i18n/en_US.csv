@@ -1,0 +1,27 @@
+Notification data no longer exist.,Notification data no longer exist.
+"A total of %1 record(s) have not been deleted, as they might be published or sent","A total of %1 record(s) have not been deleted, as they might be published or sent"
+A total of %1 record(s) have been deleted.,A total of %1 record(s) have been deleted.
+Please create notification first.,Please create notification first.
+Notification does not exist.,Notification does not exist.
+Error publishing notification. Check if it enabled and not already published/sent,Error publishing notification. Check if it enabled and not already published/sent
+Notification has been added in queue to be send.,Notification has been added in queue to be send.
+There is not any device registered.,There is not any device registered.
+Something went wrong while saving Notification.,Something went wrong while saving Notification.
+Notification data has been successfully saved.,Notification data has been successfully saved.
+Please publish notification first.,Please publish notification first.
+Notification does not exist.,Notification does not exist.
+Error sending notification. Check if it is enabled/published and not already sent,Error sending notification. Check if it is enabled/published and not already sent
+Payment Confirmation for your order #%1 was successfull.,Payment Confirmation for your order #%1 was successfull.
+Payment Confirmation for your order #%1 has been successfully received.,Payment Confirmation for your order #%1 has been successfully received.
+Your order #%1 is being prepared.,Your order #%1 is being prepared.
+Your order #%1 has been canceled.,Your order #%1 has been canceled.
+Your order #%1 has been delivered successfully.,Your order #%1 has been delivered successfully.
+Your order #%1 has been returned.,Your order #%1 has been returned.
+Please Fill all the Required Fields,Please Fill all the Required Fields
+Please provide device id.,Please provide device id.
+Bank Transfer for order #%1 submitted successfully.,Bank Transfer for order #%1 submitted successfully.
+Unable to send notification to registration id,Unable to send notification to registration id
+Your order #%1 placed successfully.,Your order #%1 placed successfully.
+Your return request for order #%1 has been submitted successfully.,Your return request for order #%1 has been submitted successfully.
+"Your order #%1 is shipped, Tracking Number For %2 is %3 .","Your order #%1 is shipped, Tracking Number For %2 is %3 ."
+Your order #%1 is shipped.,Your order #%1 is shipped.

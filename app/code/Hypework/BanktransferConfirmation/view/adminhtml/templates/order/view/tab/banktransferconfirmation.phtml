@@ -1,0 +1,82 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php 
+	$_confirmationImage = $block->getConfirmationImage(); 
+	$_name = $block->getThisOrder()->getNameWhoTransfer();
+	$_email = $block->getThisOrder()->getEmailWhoTransfer();
+	$_amount = $block->getThisOrder()->getTransferAmount();
+	$_bankName = $block->getThisOrder()->getBankName();
+	$_accountNum = $block->getThisOrder()->getAccountNumber();
+	$_bankRecipient = $block->getThisOrder()->getBankRecipient();
+	$_transferMethod = $block->getThisOrder()->getTransferMethod();
+	$_date = $block->getThisOrder()->getTransferDate();
+?>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+<section class="admin__page-section bank-transfer-confirmation">
+	<div class="fields row">
+        <div class="col-md-12">
+            <div class="input-wrap">
+                <h3><label for="information-title" class="information-title"><?php echo __('Bank Transfer Recipe')?></label></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="fields row">
+        <div class="col-md-12">
+            <div class="input-wrap">
+            	<img src="<?php echo $_confirmationImage; ?>">
+            </div>
+        </div>
+    </div>
+
+    <table style="width:100%">
+    	<tr>
+    		<th><?php echo __('Name')?></th>
+    		<td><?php echo $_name; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Email')?></th>
+    		<td><?php echo $_email; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Bank Name')?></th>
+    		<td><?php echo $_bankName; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Account Number')?></th>
+    		<td><?php echo $_accountNum; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Bank Recipient')?></th>
+    		<td><?php echo $_bankRecipient; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Transfer Method')?></th>
+    		<td><?php echo $_transferMethod; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Date')?></th>
+    		<td><?php echo $_date; ?></td>
+    	</tr>
+    	<tr>
+    		<th><?php echo __('Amount')?></th>
+    		<td><?php echo $_amount; ?></td>
+    	</tr>
+    </table>
+</section>

@@ -1,0 +1,10 @@
+<script>
+    require(['jquery'], function($){
+    	// static page collapsible
+        $('dl.accordion-static dt').click(function(e){
+		    $(this).nextUntil('dt').toggle();
+		    return false
+		});
+		$('dd').hide();
+    });
+</script>

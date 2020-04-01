@@ -1,0 +1,13 @@
+<?php /* @var $block \Hypework\Payment\Block\Frontend\Sales\Order\View */?>
+<?php if (isset($block->getOrderData()['va_number']) && !empty($block->getOrderData()['va_number'])): ?>
+    <div class="block block-order-details-view">
+        <div class="block-title">
+            <strong>Prismalink Payment Information</strong>
+        </div>
+        <div class="block-content">
+            <?php
+                echo __('Your Virtual Account Number BCA: <strong><span>%1</span></strong>', $block->getOrderData()['va_number']);
+            ?>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,27 @@
+<?php
+//$om = \Magento\Framework\App\ObjectManager::getInstance();
+//$formKey = $om->get('Magento\Framework\Data\Form\FormKey');
+//$data = $this->getFormData();
+?>
+<?php
+$form = $this->getFormData();
+//var_dump($form);exit;
+?>
+<?php if(count($form) > 0): ?>
+    <b>Please wait, loading secure payment page ... </b>
+<?php else: ?>
+     <b>Sorry, Payment error <b>
+<?php endif; ?>
+<form name="onecheckout" id="onecheckout_place_form" action="<?php echo $form['URL']; ?>" method="POST">
+	<?php foreach ($form as $name => $value): ?>
+		<?php if ($name !== 'URL'): ?>
+			<input type="hidden" name="<?php echo $name; ?>" value="<?php echo $value; ?>"/>
+		<?php endif; ?>
+	<?php endforeach; ?>
+</form>
+<?php if(count($form) > 0):?>
+<script type="text/javascript">
+    var paymentForm = document.getElementById('onecheckout_place_form');
+    window.onload = paymentForm.submit();
+</script>
+<?php endif; ?>

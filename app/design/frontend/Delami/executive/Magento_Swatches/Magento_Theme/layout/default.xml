@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2column-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceBlock name="store_switcher" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="my-account-link" remove="true" />
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="catalog.compare.link" remove="true" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="view.addto.wishlist" remove="true" />
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="header.panel.wrapper" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="store_language" remove="true" />
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceBlock name="catalog.leftnav" remove="true" />
+
+        <referenceContainer name="sidebar.additional">
+            <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+        </referenceContainer>
+
+        <referenceBlock name="top.links">
+            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link-header">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Register</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="navigation.sections.side" after="-" template="Magento_Theme::html/sections.phtml">
+                <arguments>
+                    <argument name="group_name" xsi:type="string">navigation-sections</argument>
+                    <argument name="group_css" xsi:type="string">nav-sections</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Menu</argument>
+                    </arguments>
+                    <block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav" template="Magento_Theme::html/topmenu.phtml" ttl="3600" before="-"/>
+                </block>
+                <block class="Magento\Framework\View\Element\Text" name="store.links" group="navigation-sections">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Account</argument>
+                        <argument name="use_force" xsi:type="boolean">true</argument>
+                        <argument name="text" xsi:type="string"><![CDATA[<!-- Account links -->]]></argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="store.settings" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Settings</argument>
+                    </arguments>
+                    <block class="Magento\Store\Block\Switcher" name="store.settings.language" template="Magento_Store::switch/languages.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Directory\Block\Currency" name="store.settings.currency" template="Magento_Directory::currency.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="header-wrapper">
+            <container name="header_wrapper_row" label="Header wrapper Row" htmlTag="div" htmlClass="row" />
+        </referenceContainer>
+        <move element="navigation.sections.side" destination="header-wrapper" before="-" />
+        <referenceContainer name="header_wrapper_row">
+            <container name="left_header_executive" label="Logo Header" htmlTag="div" htmlClass="col-md-8" />
+            <container name="right_header_executive" label="Logo Header" htmlTag="div" htmlClass="col-md-4" />
+        </referenceContainer>
+        <referenceContainer name="right_header_executive">
+            <container name="top_links_executive" htmlTag="div" htmlClass="top-links-executive" />
+            <container name="cart_search_executive" htmlTag="div" htmlClass="cart-search" />
+        </referenceContainer>
+
+        <move element="logo" destination="left_header_executive" />
+        <move element="top.links" destination="top_links_executive" />
+        <move element="top.search.header" destination="cart_search_executive" before="minicart" />
+        <move element="minicart" destination="cart_search_executive" />
+        <move element="store.settings.language" destination="top_links_executive" />
+        
+        <referenceContainer name="footer">
+            <container name="main_footer" as="main.footer" label="Executive Main Footer" htmlTag="div" htmlClass="row">
+                <container name="main_footer_about_us" label="Executive Main Footer About Us" htmlTag="div" htmlClass="col-md-3">
+                    <block class="Magento\Cms\Block\Block" name="footer-about-us">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-about-us</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="main_footer_customer_care" label="Executive Main Footer Customer Care" htmlTag="div" htmlClass="col-md-3">
+                    <block class="Magento\Cms\Block\Block" name="footer-customer-care">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-customer-care</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="main_footer_shopping_guide" label="Executive Main Footer Shopping Guide" htmlTag="div" htmlClass="col-md-3">
+                    <block class="Magento\Cms\Block\Block" name="footer-shopping-guide">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-shopping-guide</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="main_footer_social_media" as="footer.social.media" label="Executive Main Footer Shopping Guide" htmlTag="div" htmlClass="col-md-3">
+                    <block class="Magento\Newsletter\Block\Subscribe" name="footer.subscribe" as="footer.subscribe" before="-" template="Magento_Newsletter::footer-subscribe.phtml"/>
+                    <container name="footer-social-media-wrapper" htmlTag="div" htmlClass="social-media">
+                        <block class="Magento\Cms\Block\Block" name="footer-social-media" as="footer.social.media.icon">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-social-media</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                </container>
+            </container>
+
+            <container name="footer_copyright" label="Footer Copyright" htmlTag="div" htmlClass="row">
+                <container name="footer_copyright_footer" htmlTag="div" htmlClass="col-md-12 copyright" />
+            </container>
+        </referenceContainer>
+        <move element="copyright" destination="footer_copyright_footer" />
+
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Framework\View\Element\Js\Components" name="after.body.start.js" as="js_first_init" template="Magento_Theme::js/after_body_start.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Js\Components" name="before.body.end.js" as="js_last_init" template="Magento_Theme::js/before_body_end.phtml"/>
+        </referenceContainer>
+
+    </body>
+</page>

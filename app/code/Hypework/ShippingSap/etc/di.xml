@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Quote\Model\ShippingMethodManagement" type="Hypework\ShippingSap\Model\Quote\ShippingMethodManagement" />
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="re-sorting-sap" type="Hypework\ShippingSap\Ui\Sorting" sortOrder="2" />
+    </type>
+</config>

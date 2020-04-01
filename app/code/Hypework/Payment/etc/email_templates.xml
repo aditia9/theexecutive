@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:Magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="vanumber_template" label="VA Number Email Template" file="vanumber.html" type="html" module="Hypework_Payment" area="frontend"/>
+    <template id="vanumber_template_bca" label="VA Number BCA Email Template" file="vanumber_bca.html" type="html" module="Hypework_Payment" area="frontend"/>
+</config>

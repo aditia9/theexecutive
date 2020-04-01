@@ -1,0 +1,18 @@
+{
+  "name": "apptrian/facebook-catalog",
+  "description": "Generates Facebook Catalog Product Feed used for Facebook Dynamic Ads. Easy to install and use.",
+  "type": "magento2-module",
+  "version": "1.4.1",
+  "license": [
+    "EULA"
+  ],
+  "require": {
+    "php": "~5.5|~7.0"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Apptrian\\FacebookCatalog\\": ""
+    }
+  }
+}

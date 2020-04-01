@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <body>
+		<referenceBlock name="navigation.sections.side" remove="true" />
+
+        <referenceBlock name="navigation.sections" remove="true" />
+        <referenceBlock name="checkout.cart.coupon" remove="true" />
+        <referenceBlock name="checkout.cart.summary.title" remove="true" />
+
+        <referenceBlock name="checkout.cart.shipping">
+		    <arguments>
+		        <argument name="jsLayout" xsi:type="array">
+		            <item name="components" xsi:type="array">
+		                <item name="block-summary" xsi:type="array">
+		                    <item name="config" xsi:type="array">
+		                        <item name="componentDisabled" xsi:type="boolean">true</item>
+		                    </item>
+		                </item>
+		            </item>
+		        </argument>
+		    </arguments>
+		</referenceBlock>
+		<referenceBlock name="checkout.cart.totals">
+		    <arguments>
+		        <argument name="jsLayout" xsi:type="array">
+		            <item name="components" xsi:type="array">
+		                <item name="block-totals" xsi:type="array">
+		                    <item name="children" xsi:type="array">
+		                        <item name="tax" xsi:type="array">
+		                            <item name="config" xsi:type="array">
+		                                <item name="componentDisabled" xsi:type="boolean">true</item>
+		                            </item>
+		                        </item>
+		                    </item>
+		                </item>
+		            </item>
+		        </argument>
+		    </arguments>
+		</referenceBlock>
+
+		<referenceContainer name="checkout.cart.container">
+			<container name="form_cart" label="Wrapper Form Cart" before="action_cart" htmlTag="div" htmlClass="form-cart" />
+			<container name="action_cart" label="Wrapper Action Cart" after="checkout.cart.form" htmlTag="div" htmlClass="action-cart" />
+		</referenceContainer>
+		<move element="checkout.cart.methods.bottom" destination="action_cart" />
+		<move element="cart.summary" destination="form_cart" />
+		
+
+    </body>
+</page>

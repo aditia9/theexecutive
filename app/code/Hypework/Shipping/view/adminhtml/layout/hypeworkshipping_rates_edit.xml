@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="prototype/windows/themes/default.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Hypework\Shipping\Block\Adminhtml\Rates\Edit" name="hypeworkshipping_rates_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Hypework\Shipping\Block\Adminhtml\Rates\Edit\Tabs" name="hypeworkshipping_rates_edit_tabs">
+                <block class="Hypework\Shipping\Block\Adminhtml\Rates\Edit\Tab\General" name="hypeworkshipping_rates_edit_tab_general"/>
+                <!-- <block class="Hypework\Shipping\Block\Adminhtml\Rates\Edit\Tab\SearchEngineOptimisation" name="hypeworkshipping_rates_edit_tab_optimisation"/>
+                <block class="Hypework\Shipping\Block\Adminhtml\Rates\Edit\Tab\Websites" name="hypeworkshipping_rates_edit_tab_websites"/> -->
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">general_section</argument>
+                    <argument name="block" xsi:type="string">hypeworkshipping_rates_edit_tab_general</argument>
+                </action>
+                <!-- <action method="addTab">
+                    <argument name="name" xsi:type="string">optimisation_section</argument>
+                    <argument name="block" xsi:type="string">hypeworkshipping_rates_edit_tab_optimisation</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">websites_section</argument>
+                    <argument name="block" xsi:type="string">hypeworkshipping_rates_edit_tab_websites</argument>
+                </action> -->
+            </block>
+        </referenceContainer>
+    </body>
+</page>

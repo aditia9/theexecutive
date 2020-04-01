@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Hypework
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Hypework license that is
+ * available through the world-wide-web at this URL:
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Hypework
+ * @package     Hypework_All
+ * @copyright   Copyright (c) 2012 Hypework
+ * @license     Hypework
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hypework_All::hypework" title="hypework" resource="Hypework_All::hypework" module="Hypework_All" sortOrder="40"/>
+    </menu>
+</config>

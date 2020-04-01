@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference 
+        for="Ranosys\Custom\Api\MobileAppVersionInterface"
+        type="Ranosys\Custom\Model\MobileAppVersion" />
+    <preference 
+        for="Ranosys\Custom\Api\Data\MobileAppVersiondataInterface"
+        type="Ranosys\Custom\Model\MobileAppVersionmodel" />
+    <preference 
+        for="Ranosys\Custom\Api\SortByAttributeInterface"
+        type="Ranosys\Custom\Model\SortByAttribute" />
+    <preference 
+        for="Ranosys\Custom\Api\Data\SortByAttributedataInterface"
+        type="Ranosys\Custom\Model\SortByAttributemodel" />
+    <preference 
+        for="Ranosys\Custom\Api\CityInformationAcquirerInterface"
+        type="Ranosys\Custom\Model\CityInformationAcquirer" />
+    <preference 
+        for="Ranosys\Custom\Api\Data\CityInformationInterface"
+        type="Ranosys\Custom\Model\Data\CityInformation" />
+    <preference 
+        for="Ranosys\Custom\Api\ProductContentURLInterface"
+        type="Ranosys\Custom\Model\ProductContentURL" />
+    <preference 
+        for="Ranosys\Custom\Api\Data\ProductURLdataInterface"
+        type="Ranosys\Custom\Model\Data\ProductContentURLdata" />
+    
+    <preference for="\Magento\Framework\Mail\Template\TransportBuilder"
+                type="Ranosys\Custom\Mail\Template\TransportBuilder" />
+</config>

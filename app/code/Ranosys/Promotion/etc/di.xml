@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ranosys\Promotion\Api\Data\GridInterface" type="Ranosys\Promotion\Model\Grid" />
+    <preference for="Ranosys\Promotion\Api\HomePromotionInterface" type="Ranosys\Promotion\Model\HomePromotion" />
+    <virtualType name="Ranosys\Promotion\Model\ResourceModel\Grid\Grid\Collection" 
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">home_promotions</argument>
+            <argument name="resourceModel" xsi:type="string">Ranosys\Promotion\Model\ResourceModel\Grid</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="grid_record_grid_list_data_source" xsi:type="string">
+                    Ranosys\Promotion\Model\ResourceModel\Grid\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

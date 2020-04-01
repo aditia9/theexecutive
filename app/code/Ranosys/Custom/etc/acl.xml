@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Ranosys_Api::customapi">
+                    <resource id="Ranosys_Custom::mobileappversionapi" title="Mobile App Version Api" translate="title" sortOrder="1" />
+                    <resource id="Ranosys_Custom::productstaticurl" title="Product Static Page URL Api" translate="title" sortOrder="1" />
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Ranosys_Api::customconfig">
+                                <resource id="Ranosys_Custom::mobileappversionconfig" title="Mobile App Version Configuration" translate="title" sortOrder="500" />
+                                <resource id="Ranosys_Custom::vouchersubscriptionconfig" title="Voucher Subscription Configuration" translate="title" sortOrder="550" />
+                                <resource id="Ranosys_Custom::productstaticurlconfig" title="Product Static Page URL Api" translate="title" sortOrder="600" />
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

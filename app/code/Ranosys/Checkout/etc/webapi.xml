@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+<!-- Routing define -->
+    <route url="/V1/guest-carts/:cartId/items/count" method="GET">
+        <service class="Ranosys\Checkout\Api\CartCountInterface" method="getGuestCartCount"/>
+            <resources>
+             <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/cart/mine/count" method="GET">
+        <service class="Ranosys\Checkout\Api\CartCountInterface" method="getCartCount"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/cart/mine/mergecart/:guestCartId" method="GET">
+        <service class="Ranosys\Checkout\Api\CartMergeInterface" method="mergeCart"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+</routes>

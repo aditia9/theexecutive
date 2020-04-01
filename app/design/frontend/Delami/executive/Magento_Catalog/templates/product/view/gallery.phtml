@@ -1,0 +1,80 @@
+<div class="product-images">
+    <?php 
+    $_product = $block->getProduct();
+    $images = $_product->getMediaGalleryImages();
+    if ($images): ?>
+        <?php 
+            $n = 0; foreach ($images as $image): $n++ ?>
+            <div class="images" data-thumb="thumb-item-<?php echo $n ?>">
+                <img src="<?php echo $image->getUrl() ?>" alt="<?php echo $_product->getName() ?>">
+            </div>
+        <?php endforeach ?>
+    <?php endif ?>
+</div>
+<div class="images-thumbnails">
+    <?php 
+    $_product = $block->getProduct();
+    $images = $_product->getMediaGalleryImages();
+    if ($images): ?>
+        <?php 
+            $n = 0; foreach ($images as $image): $n++ ?>
+            <div class="thumbnails" data-thumb="thumb-item-<?php echo $n ?>">
+                <img src="<?php echo $image->getUrl() ?>" alt="<?php echo $_product->getName() ?>">
+            </div>
+        <?php endforeach ?>
+    <?php endif ?>
+</div>
+
+
+<script type="text/javascript">
+require([ 'jquery','jquery.slick'], function($){ 
+    $(document).ready(checkContainer);
+    function thumbnailsClick() {
+        $('.images-thumbnails .thumbnails').each(function(){
+            $(this).click(function(){
+                var dataThumb = '.'+$(this).attr('data-thumb');
+                console.log(dataThumb);
+                // $(dataThumb).click();
+            });
+
+        })
+    }
+    function checkContainer() {
+        if($('.fotorama').is(':visible')) {
+            $('.fotorama__nav__frame').each(function(i) {
+                $(this).addClass('thumb-item-'+(i+1));
+            });
+            thumbnailsClick();
+        } else {
+            setTimeout(checkContainer, 50);
+        }
+    }
+
+
+    $('.product-images').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        swipe: false,
+        touchMove: false,
+        draggable: false,   
+        asNavFor: '.images-thumbnails'
+    });
+    $('.images-thumbnails').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.product-images',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
+    });
+
+    $(".thumbnails").click(function() {
+        $('html, body').animate({
+            scrollTop: $('body').offset().top
+        }, 1000);
+    });
+
+}); 
+</script>

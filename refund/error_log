@@ -1,0 +1,39 @@
+[12-Mar-2018 08:31:15 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'development_magento'@'localhost' (using password: YES) in /home/development/public_html/refund/config.php on line 8
+[12-Mar-2018 09:13:03 UTC] PHP Parse error:  syntax error, unexpected 'INTO' (T_STRING) in /home/development/public_html/refund/results.php on line 35
+[12-Mar-2018 10:34:06 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 56
+[12-Mar-2018 10:35:24 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 56
+[12-Mar-2018 10:35:46 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 56
+[12-Mar-2018 10:36:43 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/development/public_html/refund/results1.php on line 47
+[12-Mar-2018 10:36:44 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/development/public_html/refund/results1.php on line 47
+[12-Mar-2018 10:36:50 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/development/public_html/refund/results1.php on line 47
+[12-Mar-2018 10:37:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:37:56 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:38:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:38:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:38:34 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:38:36 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:39:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/development/public_html/refund/results1.php on line 50
+[12-Mar-2018 10:50:27 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/development/public_html/refund/results1.php on line 53
+[12-Mar-2018 10:50:48 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/development/public_html/refund/results1.php on line 53
+[12-Mar-2018 10:51:01 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 10:51:02 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 10:51:03 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 10:51:11 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 10:53:52 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 48
+[12-Mar-2018 10:53:56 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 48
+[12-Mar-2018 11:01:55 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:02:54 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:02:56 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:03:12 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:03:13 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:04:13 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:04:14 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:05:18 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:05:20 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:05:23 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:05:59 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:06:00 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:06:22 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:07:02 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:07:03 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/development/public_html/refund/results1.php on line 49
+[12-Mar-2018 11:07:25 UTC] PHP Parse error:  syntax error, unexpected '$noorder' (T_VARIABLE), expecting ',' or ';' in /home/development/public_html/refund/results1.php on line 49

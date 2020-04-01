@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="hypework_productreturn" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Return Product</label>
+            <tab>Hypework</tab>
+            <resource>Hypework_Productreturn::config</resource>
+            <group id="hypework_productreturn_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Return Product Configuration</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="emailrecipients" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Recipient(s)</label>
+                    <comment>Can be multiple emails (separated by semicolon ";" character)</comment>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field>
+                <!-- <field id="reasons" translate="label" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Reason List</label>
+                    <frontend_model>Hypework\Productreturn\Block\System\Config\Form\Field\Reason</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field> -->
+                <field id="debuglog" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Debug Log</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field>
+            </group>
+        </section>
+
+    </system>
+</config>

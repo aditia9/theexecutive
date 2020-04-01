@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/layerednavigation/filters" method="GET">
+        <service class="Ranosys\LayeredNavigation\Api\FiltersInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+        <data>
+            <parameter name="id" >3</parameter>
+        </data>
+    </route>
+    <route url="/V1/layerednavigation/searchfilters" method="GET">
+        <service class="Ranosys\LayeredNavigation\Api\SearchFiltersInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

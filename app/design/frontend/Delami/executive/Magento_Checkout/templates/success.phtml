@@ -1,0 +1,150 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php /** @var $block \Magento\Checkout\Block\Onepage\Success */ ?>
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+$order = $objectManager->get('Magento\Sales\Model\Order')->load($block->getOrderId());
+$orderItems = $order->getAllVisibleItems();
+$priceFormat = $this->helper('Magento\Framework\Pricing\Helper\Data');
+$paymentCode = $order->getPayment()->getMethodInstance()->getCode();
+$blockPrismalink = $objectManager->get('Hypework\Payment\Block\Frontend\Onepage\Success');
+?>
+<div class="block success-page">
+    <div class="block-title">
+        <h2>Thank You!</h2>
+    </div>
+    <div class="block-content">
+        <div class="checkout-success">
+            <?php if ($block->getOrderId()):?>
+
+                <p><?= /* @escapeNotVerified */ __('Thank you for shopping at The Executive! Here are the details of you order. We\'ll email you an order confirmation with details.') ?></p>
+
+                <?php if ($block->getCanViewOrder()) :?>
+                    <div class="order-number">
+                        <p><?= __('Order Number: ') ?></p>
+                        <p><?= __('%1', sprintf('<a href="%s" class="order-number">#%s</a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
+                    </div>
+                <?php  else :?>
+                    <p><?= __('Your order # is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
+                <?php endif;?>
+
+                <?php if ($blockPrismalink->getVaNumber()):?>
+                    <p><?php echo __('Bank Account: <span><strong>%1</strong></span>.', 'BCA'); ?></p>
+                    <p><?php echo __('Your Virtual Account Number is: <span><strong>%1</strong></span>.', $blockPrismalink->getVaNumber()); ?></p>
+                <?php endif; ?>
+                    
+            <?php endif;?>
+
+            <?= $block->getAdditionalInfoHtml() ?>
+
+        </div>
+    </div>
+</div>
+
+<div class="order-details">
+    <div class="block-title">
+        <h4><?= __('Order Detail') ?></h4>
+    </div>
+    <div class="block-content">
+        <table class="order-resume">
+            <thead>
+                <tr>
+                    <th class="p-image"><?= __('Product') ?></th>
+                    <th class="p-name"><?= __('Description') ?></th>
+                    <th class="p-size"><?= __('Size') ?></th>
+                    <th class="p-color"><?= __('Color') ?></th>
+                    <th class="p-qty"><?= __('Units') ?></th>
+                    <th class="p-price"><?= __('Amount') ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($orderItems as $item): ?>
+                    <tr>
+                        <td class="p-image">
+                            <?php 
+                               $product = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getProduct()->getId());
+                                        $imageProductUrl = $product->getProductUrl(); 
+                                        $imagewidth=100;
+                                        $imageheight=100;
+                                        $imageHelper  = $objectManager->get('\Magento\Catalog\Helper\Image');
+                                        $image_url = $imageHelper->init($product, 'product_page_image_small')->setImageFile($product->getFile())->resize($imagewidth, $imageheight)->getUrl();
+                                         echo '<a href="'.$imageProductUrl.'"><img src="'.$image_url.'" width="'.$imagewidth.'" height="'.$imageheight.'" /></a>'
+                            ?>
+                        </td>
+                        <td class="p-name">
+                            <div class="product-name">
+                                <span><?php echo $item->getName() ?></span>
+                            </div>
+                        </td>
+                        <?php $options = $item->getProductOptions();  
+                        foreach ($options['attributes_info'] as $option): ?>
+                                <td class="p-<?php echo strtolower($option['label'])?>"><span>
+                                <?php echo $option['value']; ?>
+                                </span></td>
+                        <?php endforeach ?>
+                        <td class="p-qty"><?php echo (int)$item->getQtyOrdered() ?></td>
+                        <td class="p-price">
+                            <div class="price">
+                                <?php if ((int)$item->getOriginalPrice() != (int)$item->getPrice()) : ?>
+                                <div class="original-price">
+                                    <div class="price">
+                                        <?php echo $priceFormat->currency($item->getOriginalPrice(),true,true)?>
+                                    </div>
+                                </div>
+                                <?php endif ?>
+                                <div class="base-price">
+                                    <span class="price">
+                                        <?php echo $priceFormat->currency($item->getPrice(),true,true)?>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <table class="resume-order-total">
+                            <tr>
+                                <td><?php echo __('Total')?></td>
+                                <td><?php echo $priceFormat->currency($order->getSubtotal(),true,true)?></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo __('Shipping Cost')?></td>
+                                <td><?php echo $priceFormat->currency($order->getBaseShippingAmount(),true,true)?></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo __('Discount Voucher')?></td>
+                                <td><?php echo $priceFormat->currency($order->getBaseDiscountAmount(),true,true)?></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo __('Total Price')?></td>
+                                <td><?php echo $priceFormat->currency($order->getBaseGrandTotal(),true,true)?></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+</div>
+
+<input type="text" id="idsuccess" style="display:none" value="<?php echo $block->getOrderId(); ?>">
+<input type="text" id="pricesuccess" style="display:none" value="<?php echo $order->getBaseGrandTotal(); ?>">
+
+<script>
+var idproduct    = document.getElementById("idsuccess").value;
+var priceproduct = document.getElementById("pricesuccess").value;
+
+gtag('event', 'conversion', { 'send_to': 'AW-739565860/b3U6CIXsirEBEKTC0-AC', 'value': priceproduct, 'currency': 'IDR', 'transaction_id': idproduct });
+</script>

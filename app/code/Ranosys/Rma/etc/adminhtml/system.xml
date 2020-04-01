@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="hypework_productreturn">
+            <group id="rma_returnto_address" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Return To Address Configuration</label>
+                <field id="returnto_name" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Return To Name</label>
+                    <comment>Return To Name</comment>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field>
+                <field id="returnto_address" translate="label" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Return To Address</label>
+                    <comment>Return To Address</comment>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field>
+                <field id="returnto_contact" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Return To Contact</label>
+                    <comment>Return To Contact</comment>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field>
+            </group>
+            <group id="hypework_productreturn_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="returnin_days" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number Of Days In Product Can Return</label>
+                    <comment>number of days in which product can be returned back to seller</comment>
+                    <depends><field id="hypework_productreturn/hypework_productreturn_group/active">1</field></depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,21 @@
+{
+    "name": "hypework/module-categoryclass",
+    "description": "Adding custom class field for category",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Hypework\\CategoryClass\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

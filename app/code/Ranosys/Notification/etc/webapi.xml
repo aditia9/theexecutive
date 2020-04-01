@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route url="/V1/notification/registerdevice" method="POST">
+        <service class="Ranosys\Notification\Api\FcmnotificationInterface" method="registerDevice"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <route url="/V1/notification/changestatus" method="POST">
+        <service class="Ranosys\Notification\Api\FcmnotificationInterface" method="changeNotificationStatus"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    
+    <route url="/V1/notification/mine/logout" method="POST">
+        <service class="Ranosys\Notification\Api\FcmnotificationInterface" method="logoutCustomer"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    
+    <route url="/V1/notification/mine/list" method="POST">
+        <service class="Ranosys\Notification\Api\FcmnotificationInterface" method="getNotificationList"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    
+    <route url="/V1/notification/mine/count" method="POST">
+        <service class="Ranosys\Notification\Api\FcmnotificationInterface" method="getUnreadCount"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    
+</routes>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+			<add id="Hypework_BanktransferConfirmation::title" title="Bank Transfer Confirmation" module="Hypework_BanktransferConfirmation" sortOrder="300" resource="Magento_Backend::content" parent="Hypework_All::hypework"/>
+			   	<add id="Hypework_BanktransferConfirmation::configuration" title="Configuration" module="Hypework_BanktransferConfirmation" sortOrder="10" action="adminhtml/system_config/edit/section/hypework_banktransferconfirmation/" resource="Magento_Backend::content" parent="Hypework_BanktransferConfirmation::title"/>
+    </menu>
+</config>

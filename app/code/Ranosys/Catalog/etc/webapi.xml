@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route url="/V1/categoriescustom" method="GET">
+        <service class="Ranosys\Catalog\Api\CategoryManagementInterface" method="getTree" />
+        <resources>
+            <resource ref="Ranosys_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/productslist" method="GET">
+        <service class="Ranosys\Catalog\Api\ProductListInterface" method="getList"/>
+        <resources>
+            <resource ref="Ranosys_Catalog::products" />
+        </resources>
+    </route>
+</routes>

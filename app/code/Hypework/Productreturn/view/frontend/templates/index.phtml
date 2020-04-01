@@ -1,0 +1,112 @@
+<legend class="legend"><span><?php echo __('Return/Refund Product')?></span></legend>
+
+<form enctype="multipart/form-data" 
+    action="<?php echo $block->getBaseUrl() ?>productreturn/action/submit" 
+    id="returForm" 
+    method="post"
+    data-mage-init='{"validation":{}}'>
+    <div class="fieldset return-form" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+        <div class="form-list">
+            <div class="fields row">
+                <div class="col-md-6">
+                    <div class="input-wrap">
+
+                        <label for="orderid" class="required">Order ID</label>
+                        <div class="input-box">
+                              <input name="orderid" id="orderid" title="orderid" class="input-text required-entry" type="text" data-validate="{required:true}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-wrap">
+                       <label for="name" class="required">Name</label>
+                        <div class="input-box">
+                            <input name="name" id="name" title="Name" class="input-text required-entry" type="text" data-validate="{required:true}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fields row">
+                <div class="col-md-6"> 
+                    <div class="input-wrap">
+                        <label for="email_submitter" class="required">Email</label>
+                        <div class="input-box">
+                            <input name="email_submitter" id="email_submitter" title="Email" value="" class="input-text required-entry validate-email" type="text" data-validate="{required:true}">
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-md-6">
+                <div class="input-wrap">
+                    <label for="phone">Phone</label>
+                    <div class="input-box">
+                        <input name="phone" id="phone" title="Telephone" value="" class="input-text" type="text" data-validate="{required:true}">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fields row">
+                <div class="col-md-6">
+                    <div class="input-wrap">
+                        <label for="sku" class="required">Product Code</label>
+                        <div class="input-box">
+                            <input name="sku" id="sku" title="Email" value="" class="input-text required-entry" type="text" data-validate="{required:true}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-wrap">
+                        <label for="reason">Reason</label>
+                        <div class="input-box">
+                            <select name="reason" id="reason" title="Telephone" value="" class="input-text" data-validate="{required:true}">
+                                <?php $optionList = $block->getReasonList(); ?>
+                                <?php foreach($optionList as $option): ?>
+                                    <option><?php echo $option ?></option>
+                                <?php endforeach ?>
+                            </select>
+                            <i class="fa fa-caret-down selectoption"></i>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="fields row">                
+                <div class="col-md-12">
+                    <div class="input-wrap">
+                        <label for="message" class="required control-label">Message</label>
+                        <div class="input-box">
+                            <textarea name="message" id="message" title="Message" class="input-text form-control txtstuff" cols="5" rows="3" onfocus="this.placeholder = &quot; &quot;" onblur="this.placeholder = &quot;Message&quot;"></textarea><span class="focused" data-selector="message"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="buttons-set"> -->
+        <!-- <p class="required">* Required Fields</p> -->
+        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;">
+
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" title="Submit" class="action primary"><span>Submit</span></button>
+            </div>
+            <div class="secondary">
+                <a class="action back" href="http://delami.executive.me/productreturn/action/"><span>Go back</span></a>
+            </div>
+        </div>
+    <!-- </div> -->
+</form>
+
+<legend class="legend">For return to warehouse Theexecutive with Alfatrex.</legend> <br>
+List Alfatrex <a href="https://www.alfatrex.id/homepage/dropstore/"><span>klik Disini</span></a><br>
+1. Send with Alfamart, Alfamidi and Dan-Dan <br>
+2. Drop off product return on cashier and get the booking code.<br>
+3. Save booking code.<br>
+4. You will receive email when product return received. <br>
+5. Refunds as estimated time

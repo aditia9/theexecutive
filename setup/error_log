@@ -1,0 +1,248 @@
+[06-Apr-2018 06:36:17 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 06:36:20 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 06:53:59 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 06:55:57 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 07:48:15 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 07:55:18 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 08:03:23 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 08:10:44 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 08:13:43 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 09:00:49 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 09:05:37 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 09:20:10 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 10:48:22 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[06-Apr-2018 10:48:39 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_e734e0a8eada2945a3079b9687034c34, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('e734e0a8eada294...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('e734e0a8eada294...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('e734e0a8eada294...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:52:25 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:55:09 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:55:25 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:55:27 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:56:22 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:56:25 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[07-Apr-2018 03:56:50 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_5549dd4f2270f5c3e1699ab93c3cf80d, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('5549dd4f2270f5c...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('5549dd4f2270f5c...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('5549dd4f2270f5c...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 04:39:52 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 07:58:16 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 08:14:04 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 08:24:14 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pub in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 08:29:11 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(home/development/public_html/var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_sta in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 08:31:17 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(/var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 /home/development/pu in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 08:32:11 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(var/www/development/var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_start()
+#5 / in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 08:32:43 UTC] PHP Fatal error:  Uncaught Exception: Warning: SessionHandler::read(): open(home/development/public_html/var/session/sess_a9c9b722160dd9e71e3c020f7e54e556, O_RDWR) failed: No such file or directory (2) in /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php on line 22 in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php:61
+Stack trace:
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler(2, 'SessionHandler:...', '/home/developme...', 22, Array)
+#1 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler/Native.php(22): SessionHandler->read('a9c9b722160dd9e...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Session/SaveHandler.php(93): Magento\Framework\Session\SaveHandler\Native->read('a9c9b722160dd9e...')
+#3 [internal function]: Magento\Framework\Session\SaveHandler->read('a9c9b722160dd9e...')
+#4 /home/development/public_html/lib/internal/Magento/Framework/Session/SessionManager.php(189): session_sta in /home/development/public_html/lib/internal/Magento/Framework/App/ErrorHandler.php on line 61
+[09-Apr-2018 09:04:07 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The file "/home/development/public_html/generated/code/Magento/Indexer/Model/Indexer/CollectionFactory.php" cannot be deleted Warning!unlink(/home/development/public_html/generated/code/Magento/Indexer/Model/Indexer/CollectionFactory.php): No such file or directory in /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php:382
+Stack trace:
+#0 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(405): Magento\Framework\Filesystem\Driver\File->deleteFile('/home/developme...')
+#1 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/developme...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/developme...')
+#3 /home/development/public_html/lib/internal/Magento/Framework/Fi in /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php on line 382
+[09-Apr-2018 09:54:32 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The file "/home/development/public_html/generated/code/Magento/Framework/App/Config/Initial/Reader" cannot be deleted Warning!unlink(/home/development/public_html/generated/code/Magento/Framework/App/Config/Initial/Reader): No such file or directory in /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php:382
+Stack trace:
+#0 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(405): Magento\Framework\Filesystem\Driver\File->deleteFile('/home/developme...')
+#1 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/developme...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/developme...')
+#3 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/ in /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php on line 382
+[09-Apr-2018 09:55:22 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The file "/home/development/public_html/generated/code/Magento/Framework/App/Config/FileResolver/Proxy.php" cannot be deleted Warning!unlink(/home/development/public_html/generated/code/Magento/Framework/App/Config/FileResolver/Proxy.php): No such file or directory in /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php:382
+Stack trace:
+#0 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(405): Magento\Framework\Filesystem\Driver\File->deleteFile('/home/developme...')
+#1 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/developme...')
+#2 /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/home/developme...')
+#3 /home/development/public_html/lib/internal/Magento/Framework/Fi in /home/development/public_html/lib/internal/Magento/Framework/Filesystem/Driver/File.php on line 382

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ranosysconfiguration" translate="label" sortOrder="10">
+            <label>Ranosys</label>
+        </tab> 
+        <section id="abandonedcart" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Abandoned Cart Configuration</label>
+            <tab>ranosysconfiguration</tab>
+            <resource>Ranosys_AbandonedCart::abandonedcart_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="abandonedcart_timestamp" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Time Stamp for Abandoned Cart Reminder</label>
+                    <comment>Time Stamp for Abandoned Cart Reminder (in minutes)</comment>
+                </field>
+                <field id="abandonedcart_expiration" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Time Stamp for Clear Cart.</label>
+                    <comment>Time Stamp for Clear Cart (in minutes)</comment>
+                </field>
+   
+                <field id="abandonedcart_reminder_template" translate="label" type="select" sortOrder="3" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Abandoned Cart Reminder Template</label>
+                    <comment>Email template for Abandoned Cart Reminder</comment>        
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
+            <group id="email_cron" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Cron Schedule For Abandoned Cart Reminder</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable CRON</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable CRON</comment>
+                </field>
+                <field id="cron_schedule" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cron Job Schedule</label>
+                    <comment>Schedule for running cron Ex: 0 * * * * (once every hour)</comment>
+                </field>
+            </group>  
+            <group id="clearcart_cron" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Cron Schedule For Clearing Cart</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable CRON</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable CRON</comment>
+                </field>
+                <field id="cron_schedule" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cron Job Schedule</label>
+                    <comment>Schedule for running cron Ex: 0 * * * * (once every hour)</comment>
+                </field>
+            </group>         
+        </section>
+    </system>
+</config>

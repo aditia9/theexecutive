@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Ematicsolutions_Ematicjs/js/ematix.min.js"/>
+    </head>
+    <body>
+        <referenceContainer name="after.body.start">
+          <block class="Ematicsolutions\Ematicjs\Block\Emjs" name="ematicsolutions_ematicjs_emjs" as="ematicsolutions_ematicjs_emjs" template="emjs.phtml" cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

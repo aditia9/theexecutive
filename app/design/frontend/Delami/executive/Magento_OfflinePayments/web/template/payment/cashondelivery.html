@@ -1,0 +1,68 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="payment-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="payment-method-title field choice">
+        <input type="radio"
+               name="payment[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
+        <label data-bind="attr: {'for': getCode()}" class="label"><img src="data:image/png;base64,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" width="70"> <span data-bind="text: getTitle()"></span></label>
+    </div>
+
+    <div class="payment-method-content">
+        <!-- ko foreach: getRegion('messages') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <div class="payment-method-billing-address">
+            <!-- ko foreach: $parent.getRegion(getBillingAddressFormName()) -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div class="payment-instruction">
+            <div data-bind="html: getInstructions()"></div>
+        </div>
+        
+        <div class="checkout-agreements-block">
+            <!-- ko foreach: $parent.getRegion('before-place-order') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+
+        <div class="notes">
+            <dl>
+                <dt><span data-bind="i18n: 'Notes'"></span></dt>
+                <dd>
+                    <ul>
+                        <li>*
+                            <span data-bind="i18n: 'With this payment method we will not hold the stock until you have made your payment. Hence to secure your items please kindly transfer the payment immediatelu. Transfer payment has to be made within 18 hours, otherwise the order will automatically canceled.'"></span>
+                        </li>
+                        <li>**
+                            <span data-bind="i18n: 'The transfer made after office hour from mon-fri (9am-6pm), will be processed on the next business day.'"></span>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button class="action primary checkout"
+                        type="submit"
+                        data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('Place Order')},
+                        enable: (getCode() == isChecked()),
+                        css: {disabled: !isPlaceOrderActionAllowed()}
+                        "
+                        disabled>
+                    <span data-bind="i18n: 'Place Order'"></span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

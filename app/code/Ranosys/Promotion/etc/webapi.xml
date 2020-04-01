@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+<!-- Routing define -->
+    <route url="/V1/homepromotions/list" method="GET">
+        <service class="Ranosys\Promotion\Api\HomePromotionInterface" method="getHomePromotion"/>
+        <resources>
+            <resource ref="Ranosys_Promotion::homepromotion"/>
+        </resources>
+    </route>
+</routes>

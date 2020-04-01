@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="NotificationGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Ranosys\Notification\Model\ResourceModel\Notification\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">NotificationGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="NotificationGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="notification_record_notification_list_data_source" xsi:type="string">Ranosys\Notification\Model\ResourceModel\Notification\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Ranosys\Notification\Model\ResourceModel\Notification\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">notifications</argument>
+            <argument name="resourceModel" xsi:type="string">Ranosys\Notification\Model\ResourceModel\Notification</argument>
+        </arguments>
+    </virtualType>
+    <type name="Ranosys\Notification\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Ranosys\Notification\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">customLogHandler</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Ranosys\Notification\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Ranosys\Notification\Model\Notification\DevicePool">
+        <arguments>
+            <argument name="deviceTypes" xsi:type="array">
+                <item name="ios" xsi:type="object">\Ranosys\Notification\Model\Notification\Type\NotificationIos</item>
+                <item name="android" xsi:type="object">\Ranosys\Notification\Model\Notification\Type\NotificationAndroid</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

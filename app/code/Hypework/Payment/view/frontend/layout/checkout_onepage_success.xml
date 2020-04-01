@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<body>
+    <referenceContainer name="content">
+        <block class="Hypework\Payment\Block\Frontend\Onepage\Success"
+               name="hypework.order.success"
+               template="Hypework_Payment::checkout/success.phtml"
+               before="-">
+        </block>
+    </referenceContainer>
+</body>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Email/etc/email_templates.xsd">
+    <template id="abandonedcart_general_abandonedcart_reminder_template" label="Abandoned Cart Reminder Template" file="abandoned_cart_reminder_template.html" type="html" module="Ranosys_AbandonedCart" area="frontend"/>
+</config>

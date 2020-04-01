@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <jne>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Hypework\ShippingJne\Model\Carrier\Jne</model>
+                <name>JNE Shipping</name>
+                <title>JNE Shipping</title>
+            </jne>
+        </carriers>
+    </default>
+</config>

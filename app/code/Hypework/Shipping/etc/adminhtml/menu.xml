@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<!-- <add id="Hypework" title="Hypework" sortOrder="60" module="Hypework_Shipping" resource="Magento_Backend::content"/> -->
+			<add id="Hypework_Shipping::shipping" title="Shipping, Carrier, &amp; Rates" module="Hypework_Shipping" sortOrder="200" resource="Magento_Backend::content" parent="Hypework_All::hypework"/>
+			   	<add id="Hypework_Shipping::region" title="Manage Region" module="Hypework_Shipping" sortOrder="10" action="hypeworkshipping/region/index" resource="Magento_Backend::content" parent="Hypework_Shipping::shipping"/>
+			   	<add id="Hypework_Shipping::city" title="Manage City" module="Hypework_Shipping" sortOrder="20" action="hypeworkshipping/city/index" resource="Magento_Backend::content" parent="Hypework_Shipping::shipping"/>
+			   	<add id="Hypework_Shipping::carrier" title="Manage Carrier" module="Hypework_Shipping" sortOrder="20" action="hypeworkshipping/carrier/index" resource="Magento_Backend::content" parent="Hypework_Shipping::shipping"/>
+			   	<!-- <add id="Hypework_Shipping::district" title="Manage District" module="Hypework_Shipping" sortOrder="30" action="hypeworkshipping/district/index" resource="Magento_Backend::content" parent="Hypework_Shipping::shipping"/>
+			   	<add id="Hypework_Shipping::subdistrict" title="Manage Subdistrict" module="Hypework_Shipping" sortOrder="40" action="hypeworkshipping/subdistrict/indexx" resource="Magento_Backend::content" parent="Hypework_Shipping::shipping"/> -->
+			   	<add id="Hypework_Shipping::rates" title="Manage Shipping Rates" module="Hypework_Shipping" sortOrder="50" action="hypeworkshipping/rates/index" resource="Magento_Backend::content" parent="Hypework_Shipping::shipping"/>
+    </menu>
+</config>

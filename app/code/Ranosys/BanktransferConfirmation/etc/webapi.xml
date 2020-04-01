@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/banktransfer/submit" method="POST">
+        <service class="Ranosys\BanktransferConfirmation\Api\BankTransferConfirmationInterface" method="addBankInformation"/>
+            <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/banktransfer/recipients" method="GET">
+        <service class="Ranosys\BanktransferConfirmation\Api\BankTransferConfirmationInterface" method="getBankRecipient"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/banktransfer/transfermethods" method="GET">
+        <service class="Ranosys\BanktransferConfirmation\Api\BankTransferConfirmationInterface" method="getTransferMethod"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

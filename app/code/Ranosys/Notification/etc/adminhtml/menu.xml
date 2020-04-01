@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ranosys_Notification::manager" title="Notification Manager" module="Ranosys_Notification" sortOrder="10" resource="Ranosys_Notification::manager" />
+        <add id="Ranosys_Notification::add_row" title="Notification Manager" module="Ranosys_Notification" sortOrder="20" parent="Ranosys_Notification::manager" action="notification/notification" resource="Ranosys_Notification::add_row"/>
+    </menu>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">   
+    <preference 
+        for="Ranosys\Notification\Api\FcmnotificationInterface"
+        type="Ranosys\Notification\Model\Fcmnotification" />
+    
+     <preference 
+        for="Ranosys\Notification\Api\Data\FcmnotificationdataInterface"
+        type="Ranosys\Notification\Model\Fcmnotificationmodel" />
+    
+    <type name="Magento\Integration\Model\Oauth\Token">
+        <plugin name="aftercreatecustomertoken" type="Ranosys\Notification\Plugin\CustomerDeviceRegistrationPlugin" />
+    </type>
+  
+</config>

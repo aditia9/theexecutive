@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
+        <attribute code="regular_price" type="float" />
+    </extension_attributes>
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
+        <attribute code="final_price" type="float" />
+    </extension_attributes>
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductLinkInterface">
+        <attribute code="linked_product_name" type="string"/>
+        <attribute code="linked_product_image" type="string"/>
+        <attribute code="linked_product_regularprice" type="float"/>
+        <attribute code="linked_product_finalprice" type="float"/>
+    </extension_attributes>
+    <extension_attributes for="Magento\Catalog\Api\Data\ProductInterface">
+        <attribute code="tag_text" type="string" />
+    </extension_attributes>
+</config>

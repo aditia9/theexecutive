@@ -1,0 +1,52 @@
+<script>
+    require(['jquery','jquery.slick'], function($){
+
+    	// toggle search bar
+    	$('#openSearch').click(function(){
+    		$(this).parent().siblings().slideToggle();
+    	});
+
+    	// related product
+    	$('.products-related .product-items').slick({
+			autoplay: true,
+  			autoplaySpeed: 2000,
+			infinite: true,
+			slidesToShow: 2,
+			slidesToScroll: 1
+		});
+
+        $(document).ready(function(){
+            if($(document).width() >= 768) {
+                if ($('.content-after').height() <= 480) {
+                    $('#nav-sections').addClass('escape-navigation');
+                } else {
+                    $('#nav-sections').attr('style','height:'+$('.content-after').height()+'px');
+                }
+            }
+        });
+
+        jQuery('.level-top').click(function(){
+            jQuery('.navigation').find('.expanded').removeClass('expanded');
+        })
+        jQuery('.level1.parent > a').click(function(){
+            jQuery(this).parent().parent().find('.expanded').removeClass('expanded');
+            jQuery(this).siblings().toggleClass('expanded');
+            return false;
+        });
+        jQuery('.level1.parent > a').each(function(idx, el){
+            jQuery(el).on('click',function(){
+                if(!jQuery(this).hasClass('ui-state-active')){
+                    jQuery('.level1.parent a').removeClass('ui-state-active');
+                    jQuery(this).addClass('ui-state-active');
+                }else{
+                    jQuery(this).removeClass('ui-state-active');
+                    window.location = jQuery(this).attr('href');
+                }
+            });
+        });
+    	
+    });
+</script>
+<script type="text/javascript">
+!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="//configch2.veinteractive.com/tags/3CAD3F6B/0A6F/4AEE/88AD/6E50576DEDFC/tag.js";var b=document.getElementsByTagName("head")[0];if(b)b.appendChild(a,b);else{var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}}();
+</script>

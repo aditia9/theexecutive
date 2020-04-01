@@ -1,0 +1,7 @@
+[25-Jul-2019 04:41:03 UTC] PHP Fatal error:  Uncaught Zend\Http\Header\Exception\InvalidArgumentException: A field name was provided without a field value in /home/theexecu/public_html/vendor/zendframework/zend-http/src/Headers.php:192
+Stack trace:
+#0 /home/theexecu/public_html/vendor/zendframework/zend-http/src/Headers.php(155): Zend\Http\Headers->addHeaderLine('Mozilla/5.0 (Wi...')
+#1 /home/theexecu/public_html/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php(236): Zend\Http\Headers->addHeaders(Array)
+#2 /home/theexecu/public_html/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php(84): Zend\Http\PhpEnvironment\Request->setServer(Object(Zend\Stdlib\Parameters))
+#3 /home/theexecu/public_html/lib/internal/Magento/Framework/HTTP/PhpEnvironment/Request.php(133): Zend\Http\PhpEnvironment\Request->__construct()
+#4 /home/theexecu/public_html/lib/internal/Magento/Framework/App/Request/Http.php(115): Magento\Framework\HTTP\PhpEnvironment\Request->__construct(Object(Magento\Framework\Stdlib\Cookie\PhpCookieReader), Object(Magento\Framewor in /home/theexecu/public_html/vendor/zendframework/zend-http/src/Headers.php on line 192

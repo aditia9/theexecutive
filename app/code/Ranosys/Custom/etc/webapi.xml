@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Routing define -->
+    <route url="/V1/mobileappversionapi/configuration/:os" method="GET">
+        <service class="Ranosys\Custom\Api\MobileAppVersionInterface" method="getConfiguration"/>
+        <resources>
+            <resource ref="Ranosys_Custom::mobileappversionapi"/>
+        </resources>
+    </route>
+    <route url="/V1/attributes/sort" method="GET">
+        <service class="Ranosys\Custom\Api\SortByAttributeInterface" method="getSortableAttributeList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/custom/cities/:regionId" method="GET">
+        <service class="Ranosys\Custom\Api\CityInformationAcquirerInterface" method="getCitiesInfo" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productcontent/url" method="GET">
+        <service class="Ranosys\Custom\Api\ProductContentURLInterface" method="getContentURL"/>
+        <resources>
+            <resource ref="Ranosys_Custom::productstaticurl"/>
+        </resources>
+    </route>
+</routes>

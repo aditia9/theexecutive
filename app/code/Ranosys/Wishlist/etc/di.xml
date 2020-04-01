@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ranosys\Wishlist\Api\CustomerWishlistInterface"
+                type="Ranosys\Wishlist\Model\CustomerWishlist" />
+    
+    <preference for="Ranosys\Wishlist\Api\Data\WishlistInformationInterface"
+                type="Ranosys\Wishlist\Model\Data\WishlistInformation" />
+    
+    <preference for="Ranosys\Wishlist\Api\Data\WishlistItemInterface"
+                type="Ranosys\Wishlist\Model\Data\WishlistItem" />
+    
+    <preference for="Ranosys\Wishlist\Api\Data\WishlistItemOptionsInterface"
+                type="Ranosys\Wishlist\Model\Data\WishlistItemOptions" />
+    
+    <preference for="Ranosys\Wishlist\Api\AddToCartInterface"
+                type="Ranosys\Wishlist\Model\AddToCart" />
+</config>

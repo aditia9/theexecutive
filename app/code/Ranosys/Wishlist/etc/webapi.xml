@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/wishlist/mine/addproduct/" method="POST">
+        <service class="Ranosys\Wishlist\Api\CustomerWishlistInterface" method="addToWishlist"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/wishlist/mine/info/" method="GET">
+        <service class="Ranosys\Wishlist\Api\CustomerWishlistInterface" method="getInformation"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/wishlist/mine/item/:id/delete" method="DELETE">
+        <service class="Ranosys\Wishlist\Api\CustomerWishlistInterface" method="deleteItem"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/wishlist/mine/item/:id/addtocart" method="POST">
+        <service class="Ranosys\Wishlist\Api\CustomerWishlistInterface" method="addToCart"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/wishlist/mine/movefromcart/:id" method="PUT">
+        <service class="Ranosys\Wishlist\Api\CustomerWishlistInterface" method="moveToWishlistFromCart"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+        </data>
+    </route>
+</routes>

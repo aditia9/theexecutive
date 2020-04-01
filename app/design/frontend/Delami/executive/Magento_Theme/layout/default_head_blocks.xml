@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/styles-m.css" />
+        <css src="css/styles-l.css" media="screen and (min-width: 768px)"/>
+        <css src="css/styles-all.css" media="screen and (min-width: 768px)"/>
+        <css src="css/styles-mobile.css" media="screen and (max-width: 767px)"/>
+        <!--<css src="css/print.css" media="print" />-->
+        <css src="css/outsources.css" />
+        <!--<link src="Magento_Theme::js/zopim.js"/>-->
+    </head>
+</page>

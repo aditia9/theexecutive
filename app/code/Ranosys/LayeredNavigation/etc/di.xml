@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference 
+        for="Ranosys\LayeredNavigation\Api\FiltersInterface"
+        type="Ranosys\LayeredNavigation\Model\Filters" />
+    
+    <preference 
+        for="Ranosys\LayeredNavigation\Api\SearchFiltersInterface"
+        type="Ranosys\LayeredNavigation\Model\SearchFilters" />
+    
+    <preference for="Ranosys\LayeredNavigation\Api\Data\FiltersDataInterface" 
+                type="Ranosys\LayeredNavigation\Model\Data\FiltersData" />
+    
+    <preference for="Ranosys\LayeredNavigation\Api\Data\FilterInformationInterface" 
+                type="Ranosys\LayeredNavigation\Model\Data\FilterInformation" />
+    
+</config>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="product.info.mailto" remove="true" />
+        <referenceBlock name="product.info.overview" remove="true" />
+
+        <referenceContainer name="product.info.stock.sku">
+        	<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="Magento_Catalog::product/view/attribute.phtml" after="product.info.type">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getSku</argument>
+                    <argument name="at_code" xsi:type="string">sku</argument>
+                    <argument name="css_class" xsi:type="string">sku</argument>
+                    <argument name="at_label" xsi:type="string">Reference:</argument>
+                    <argument name="add_attribute" xsi:type="string">itemprop="sku"</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="product.info.main">
+        	<block class="Magento\Framework\View\Element\Template" name="additional.notes" after="product.info" template="Magento_Catalog::product/view/notes.phtml" />
+    	</referenceContainer>
+
+        <referenceContainer name="content">
+            <container name="buy.with" as="buy.with" label="Related Product" htmlTag="div" htmlClass="row buy-with">
+                <container name="buy.with.content" as="buy.with.content" htmlTag="div" htmlClass="col-md-10 col-md-offset-1" />
+            </container>
+        </referenceContainer>
+        <move element="catalog.product.related" destination="buy.with.content" />
+        
+    </body>
+</page>

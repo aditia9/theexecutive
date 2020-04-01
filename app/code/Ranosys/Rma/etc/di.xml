@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+ 
+    <preference 
+        for="Ranosys\Rma\Api\ProductRmaInterface"
+        type="Ranosys\Rma\Model\ProductRma" />
+    
+    <preference for="Ranosys\Rma\Api\Data\ReturntoAddressInterface" type="Ranosys\Rma\Model\Data\ReturntoAddress" />
+    
+    <type name="Ranosys\Sales\Api\MyOrdersInterface">
+        <plugin name="myordersinterfaceplugin" type="Ranosys\Rma\Plugin\Api\MyOrdersPlugin" />
+    </type>
+    
+</config>

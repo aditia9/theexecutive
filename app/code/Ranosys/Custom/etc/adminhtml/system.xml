@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ranosysconfiguration" translate="label" sortOrder="10">
+            <label>Ranosys</label>
+        </tab>
+        <section id="mobileappversion" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Mobile App Configuration</label>
+            <tab>ranosysconfiguration</tab>
+            <resource>Ranosys_Custom::mobileappversionconfig</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="ios_version" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Latest iOS Version</label>
+                    <comment>Latest version of iOS Application.</comment>
+                </field>
+                <field id="appstore_url" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Latest App Store URL</label>
+                    <comment>Latest URL of iOS application on App Store.</comment>
+                </field>
+                <field id="android_version" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Latest Android Version</label>
+                    <comment>Latest version of Android Application.</comment>
+                </field>
+                <field id="playstore_url" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Latest Play Store URL</label>
+                    <comment>Latest URL of Android Application on Play Store.</comment>
+                </field>
+                <field id="android_maintenance" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Android Maintenance</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Is Android app in maintenance mode?</comment>
+                </field>
+                <field id="ios_maintenance" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>iOS Maintenance</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Is iOS app in maintenance mode ?</comment>
+                </field>
+                <field id="message_maintenance" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maintenance Message</label>
+                    <comment>Message to be shown in maintenance mode.</comment>
+                </field>
+                <field id="home_promotion_message" translate="label" type="textarea" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Home Promotion Message</label>
+                    <comment>Type a message for home promotion</comment>
+                </field>
+                <field id="home_promotion_message_url" translate="label" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Home Promotion Message CMS Page</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page for home promotions</comment>
+                </field>
+                <field id="catalog_listing_promotion_message" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Catalog Listing Promotion Message</label>
+                    <comment>Type a message for catalog listing promotion</comment>
+                </field>
+                <field id="catalog_listing_promotion_message_url" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Catalog Listing Promotion Message CMS Page</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page for catalog listing promotion</comment>
+                </field>
+                <field id="buying_guide_url" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Buying Guide CMS Page</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page for buying guide</comment>
+                </field>
+                <field id="contact_us_url" translate="label" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Contact Us CMS Page</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page for contact us</comment>
+                </field>
+                <field id="term_condition_url" translate="label" type="select" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Terms And Condition CMS Page</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page for terms and conditions</comment>
+                </field>
+            </group>
+        </section>
+        <section id="subscription" translate="label" sortOrder="145" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Subscription Configuration</label>
+            <tab>ranosysconfiguration</tab>
+            <resource>Ranosys_Custom::vouchersubscriptionconfig</resource>
+            <group id="general_tab2" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="coupon_amount" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscription Voucher Amount</label>
+                    <comment>Voucher Amount</comment>
+                </field>
+                <field id="subscription_message" translate="label" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscription Message</label>
+                    <comment>Subscription Message.</comment>
+                </field>
+            </group>
+        </section>
+        <section id="staticcontent" translate="label" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Static Content Configuration</label>
+            <tab>ranosysconfiguration</tab>
+            <resource>Ranosys_Custom::productstaticurlconfig</resource>
+            <group id="general_tab3" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="composition_and_care" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Composition And Care</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page of composition and care</comment>
+                </field>
+                <field id="size_guideline" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Size Guideline</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page of size guideline</comment>
+                </field>
+                <field id="shipping_page" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipping</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page of shipping details</comment>
+                </field>
+                <field id="returns_page" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Returns</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page of returns detail</comment>
+                </field>
+                <field id="buying_guideline" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Buying Guideline</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page of buying guideline</comment>
+                </field>
+                <field id="contact_us" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Contact Us</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Select CMS page of contact us</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

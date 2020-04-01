@@ -1,0 +1,59 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_SocialLogin
+ * @copyright   Copyright (c) 2016 Mageplaza (http://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+?>
+<?php
+$helper = $block->helper();
+$color  = $helper->getStyleManagement();
+$css    = $helper->getCustomCss();
+?>
+<style>
+    #social-login-popup .social-login-title {
+		background-color: <?php echo $color ?>
+	}
+
+	#social-login-popup .social-login #bnt-social-login-authentication {
+		background-color: <?php echo $color ?>;
+		border: <?php echo $color ?>
+	}
+
+	#social-login-popup .forgot .primary button {
+		background-color: <?php echo $color ?>;
+		border: <?php echo $color ?>
+	}
+
+	#social-login-popup .create .primary button {
+		background-color: <?php echo $color ?>;
+		border: <?php echo $color ?>
+	}
+	<?php echo $css ?>
+    /* Compatible ETheme_YOURstore*/
+    /* ETheme_YOURstore  */
+    div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login {max-width: 900px !important;margin: 0 auto !important;}
+    @media (max-width: 1024px){
+        div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login .block-content {
+            padding: 0px 15px;
+        }
+    }
+
+    .instangram-feed{display:inline-block;position:relative;}
+	.instagram-image-name{bottom:5px;left:0;position:absolute;text-align:center;width:100%;z-index:1;background-color:rgba(0,0,0,0.7);color:#fff;padding:20px 0;opacity:0;height:0;}
+	.instangram-feed:hover .instagram-image-name{opacity:1;height:auto;transition-duration:0.5s;transition-timing-function:ease-in;transition-delay:0s;}
+</style>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_submit_all_after">
+        <observer name="order_place_notification" instance="Ranosys\Notification\Observer\OrderPlaceNotification" />
+    </event>
+    <event name="checkout_submit_all_after_ipay">
+        <observer name="order_place_notification" instance="Ranosys\Notification\Observer\OrderPlaceIpayNotification" />
+    </event>
+    <event name="sales_order_save_after">
+        <observer name="order_status_change_notification" instance="Ranosys\Notification\Observer\OrderStatusChangeNotification" />
+    </event>
+    <event name="banktransferconfirmation_submit_after">
+        <observer name="banktransferconfirmation_notification" instance="Ranosys\Notification\Observer\BankTransferConfirmationNotification" />
+    </event>
+    <!--<event name="sales_order_shipment_save_after">
+        <observer name="shipmentcreate_notification" instance="Ranosys\Notification\Observer\ShipmentCreateNotification" />
+    </event>-->
+    <event name="abandonedcart_sendmail_after">
+        <observer name="abandonedcart_notification" instance="Ranosys\Notification\Observer\AbandonedCartNotification" />
+    </event>
+    <event name="return_request_submit_after">
+        <observer name="orderreturn_notification" instance="Ranosys\Notification\Observer\OrderReturnNotification" />
+    </event>
+</config>

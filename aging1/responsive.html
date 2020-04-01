@@ -1,0 +1,44 @@
+<html ng-app="api">
+    <head>
+        <title>Tutorial API</title>  
+        <script type="text/javascript" src="js/angular.min.js"></script>
+    </head>
+    <style>
+        .border{
+            border: solid 1px black;
+        }
+    </style>
+
+    <body> 
+        <div ng-controller="stock">   
+            <table class="border">
+                <thead>
+                <tr>    
+                    <td class="border">ID</td>
+                    <td class="border">Nama Product</td>
+                    <td class="border">Harga</td>
+                    <td class="border">Jumlah</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in apis">
+                        <td class="border">{{item.id_product}}</td>
+                        <td class="border">{{item.reference}}</td>
+                        <td class="border">{{item.price}}</td>
+                        <td class="border">{{item.quantity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+        
+        <script>  
+            var app = angular.module('api', []);
+
+            app.controller('api', function($scope, $http){  
+                $http.get("http://aging.theexecutive.co.id/restapi.php/data").success(function(resp){
+                    $scope.apis = resp; 
+                });
+            }); 
+        </script>
+    </body>
+</html>

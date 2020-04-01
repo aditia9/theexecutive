@@ -1,0 +1,21 @@
+<script>
+    require(['jquery','jquery.slick'], function($){
+
+    	// toggle search bar
+    	$('#openSearch').click(function(){
+    		$(this).parent().siblings().slideToggle();
+    	});
+
+    	// related product
+    	$('.products-related .product-items').slick({
+			autoplay: true,
+  			autoplaySpeed: 2000,
+			infinite: true,
+			slidesToShow: 2,
+			slidesToScroll: 1
+		});
+			
+
+    	
+    });
+</script>

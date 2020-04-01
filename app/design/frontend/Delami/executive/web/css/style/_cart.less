@@ -1,0 +1,223 @@
+.checkout-cart-index {
+	#update_cart_action {
+		display: none;
+		background: transparent;
+	    border: 1px solid #000;
+	    border-radius: 0;
+	    width: 225px;
+	    height: 40px;
+	    margin: 10px 0 20px;
+	}
+	.cart-summary {
+		width: 100%;
+		float: none;
+		padding: 0 15px;
+		.cart-totals {
+			border-top: 0;
+			.table-wrapper {
+				> table.totals {
+					max-width: 320px;
+					float: right;
+					> tbody {
+						> tr {
+							> td, > th {
+								border: 0;
+								padding: 5px 0;
+								background: transparent;
+							}
+							> th {
+								text-align: right;
+							}
+							&.grand.totals {
+								strong {
+									text-transform: uppercase;
+									font-weight: 600;
+									display: block;
+									padding-top: 20px;
+								}
+							}
+						}
+					}
+				}
+				&:after {
+				  content: '';
+				  display: table;
+				  clear: both;
+				}
+			}
+		}
+	}
+	.cart-container {
+		.form-cart {
+			width: 100%;
+			float: none;
+		}
+		.cart.table-wrapper {
+			@measure: 20px;
+			margin-top: @measure*4;
+			margin-bottom: 10px;
+			> label {
+				display: block;
+				width: 100%;
+				border-bottom: 2px solid @border-color;
+				font-weight: 600;
+				line-height: 2;
+				margin-bottom: 0;
+			}
+			.table > tbody + tbody, .items > .item {border: 0;}
+			table.cart.items {
+				margin-bottom: 0;
+			}
+			thead, tbody.cart.item {
+				border-bottom: 1px dashed @grey;
+			}
+			th {
+				font-weight: 300;
+				color: @grey;
+				line-height: 2;
+				&.col {
+					&.image-wrap {
+						text-align: center;
+					}
+				}
+			}
+			.col {
+				padding-top: 0;
+				padding-bottom: 0;
+				vertical-align: middle;
+				border: 0;
+				&.image-wrap, &.itemlist, &.attr, &.qty, &.subtotal {
+					width: 100%/6;
+				}
+				&.attr, &.qty {
+					text-align: center;
+				}
+				&.qty {
+					.field.qty {
+						position: relative;
+						width: 50px + 18px;
+						margin: 0 auto;
+						input.qty {
+							display: inline-block;
+							height: 38px;
+							width: 38px;
+							float: left;
+							margin-top: 0;
+							border: 0;
+						}
+						.increment-qty-wrapper {
+							width: 30px;
+							height: 36px;
+							display: inline-block;
+							position: relative;
+							float: right;
+							span {
+								width: 18px;
+								height: 18px;
+								display: block;
+								background: @grey;
+								color: @black;
+								cursor: pointer;
+								-webkit-user-select: none;
+								-moz-user-select: none;
+								-ms-user-select: none;
+								text-align: center;
+								&:first-child {
+									margin-bottom: 2px;
+								}
+								&:hover {
+									background: @blue;
+									color: @white;
+								}
+							}
+						}
+					}
+				}
+				&.image-wrap {
+					.actions {
+						vertical-align: middle;
+						text-align: center;
+						width: @measure;
+						display: inline-table;
+						a {
+							background: @black;
+							border-radius: @measure;
+							margin: 0 15px 10px;
+							padding: 0;
+							width: @measure;
+							height: @measure;
+							display: inline-table;
+							text-align: center;
+							line-height: 18px;
+							span {
+								color: @white;
+								font-size: 12px;
+							}
+							&:hover, &:active, &:focus {
+								background: @blue !important;
+							}
+							&:last-child {
+								margin-bottom: 0;
+							}
+						}
+					}
+					.images {
+						display: inline-table;
+						a {
+							display: block;
+							padding-top: 10px;
+							padding-bottom: 10px;
+							> img {
+								max-width: 75px;
+							}
+						}
+					}
+				}
+				&.subtotal {
+					.cart-price {
+						.price {
+							font-weight: 400;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.action-cart {
+		.checkout-methods-items {
+			margin-top: 0;
+		}
+		.action {
+		    border: 1px solid @black;
+		    height: 40px;
+		    line-height: 36px !important;
+		    padding: 0 !important;
+		    width: 225px !important;
+		    display: inline-block;
+		    text-align: center;
+		    border-radius: 0;
+		    background-color: @black;
+		    span {
+		    	font-weight: 600;
+		    	font-size: 16px;
+		    	color: @white;
+		    }
+		    &:hover {
+		    	background: @blue !important;
+		    	border-color: @blue;
+		    }
+		    &.primary {
+		    	background: @white;
+		    	&:hover {
+		    		span {
+		    			color: @white;
+		    		}
+		    	}
+		    	span {
+		    		color: @black;
+		    	}
+		    }
+		}
+	}
+}

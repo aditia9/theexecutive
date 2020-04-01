@@ -1,0 +1,24 @@
+<?php 
+    $api_key = $this->getHelper()->getEmaticApiKey(); 
+    if (strlen($api_key) > 5) {
+?>
+<script type="text/javascript">
+    window.ematicData = <?php echo $this->getEmaticData(); ?>;
+
+    require.config({
+        config: {
+            'ematics': {
+                'apikey' : "<?php echo $api_key; ?>",
+                'opt' : <?php echo json_encode($this->getHelper()->getScriptOptions()); ?>
+            }
+        },
+        paths: {
+            "ematics": "//api.ematicsolutions.com/v1/ematic.min",
+        }
+    });
+    require(["ematics"], function() {
+        <?php echo $this->getEmaticsCall(); ?>
+        ematix();
+    });
+    
+</script><?php } ?>

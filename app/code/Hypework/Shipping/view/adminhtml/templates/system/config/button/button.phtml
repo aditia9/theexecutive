@@ -1,0 +1,74 @@
+<script>
+    require([
+        'jquery',
+        'prototype',
+    ], function(jQuery){
+ 
+        jQuery('#<?php echo $block->getBlockId() ?>').click(function () {
+
+        	<?php if($block->isFileUploaded()): ?>
+	            var params = {
+	            	'file_path' : '<?php echo $block->getConfig() ?>'
+	            };
+	            new Ajax.Request('<?php echo $block->getAjaxUrl() ?>', {
+	                parameters: params,
+	                loaderArea: false,
+	                asynchronous: true,
+	                onCreate: function() {
+	                    //show loader
+	                    jQuery('.loading-mask').show();
+	                },
+	                onSuccess: function(response) {
+	                	require([
+						    'Magento_Ui/js/modal/alert'
+						], function(alert) {  
+							 alert({
+		                		title: response.responseJSON.status,
+				            	content: response.responseJSON.message,
+				            	autoOpen: true,
+				            	actions: {
+				            		always: function(){}
+				            	}
+				            });
+						});
+	                	
+	                	//hide loader
+	                	//show success message
+	                	jQuery('.loading-mask').hide();
+	                },
+	                onError: function() {
+	                	jQuery('.loading-mask').hide();
+	                	alert({
+	                		title: 'Error',
+			            	content: 'Something wrong happened. Please try again',
+			            	actions: {
+			            		always: function(){}
+			            	}
+			            });
+	                }
+	            });
+	       	<?php else: ?>
+	       		require([
+				    'Magento_Ui/js/modal/alert'
+				], function(alert) {  
+					alert({
+	            		title: 'Error',
+		            	content: 'File does not exist. Please upload it first.',
+		            	actions: {
+		            		always: function(){}
+		            	}
+		            });
+				});
+	       	<?php endif; ?>
+        });
+ 
+    });
+</script>
+
+<?php echo $block->getButtonHtml() ?>
+
+<div class="loading-mask" data-role="loader" style="display: none">
+   <div class="loader">
+		<p><?php echo __('Please Wait..') ?></p>
+   </div>
+</div>

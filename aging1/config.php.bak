@@ -1,0 +1,12 @@
+<?php
+if(!defined('__NOT_DIRECT')){
+	//mencegah akses langsung ke file ini
+	die('Akses langsung tidak diizinkan!');
+}
+
+define('BASE_URL', 'http://aging.theexecutive.co.id/'); 
+//koneksi database
+define('DB_HOST','localhost');
+define('DB_USER','theexecu_shop');
+define('DB_PASS', 'Delami@123#');
+define('DB_NAME' ,'theexecu_magentoback');

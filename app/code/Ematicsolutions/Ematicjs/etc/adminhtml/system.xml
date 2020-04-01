@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="ematicsolutions" translate="label" sortOrder="10">
+            <label>Ematic Solutions</label>
+        </tab>
+        <section id="ematicjs_options" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Ematic.js</label>
+            <tab>ematicsolutions</tab>
+            <resource>Ematicsolutions_Ematicjs::ematicsolutions_ematicjs</resource>
+            <group id="ematicsolutions_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="ematicsolutions_api_key" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>API Key</label>
+                    <comment>Enter your API key here</comment>
+                </field>
+                <field id="ematicsolutions_longdesc" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Use long description</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select if full product description should be used</comment>
+                </field>
+            </group>
+            <group id="ematicsolutions_group_adv" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Advanced Options</label>
+                <field id="ematicsolutions_checkout" translate="label comment" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Checkout URL match</label>
+                    <comment>Enter Checkout URL pages. Put every page in a new line.</comment>
+                </field>
+                <field id="ematicsolutions_search" translate="label" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Cart URL match</label>
+                    <comment>Enter Cart URL pages for Ajax requests. Put every page in a new line.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

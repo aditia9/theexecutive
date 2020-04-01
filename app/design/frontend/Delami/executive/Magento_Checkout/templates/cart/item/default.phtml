@@ -1,0 +1,136 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Checkout\Block\Cart\Item\Renderer */
+
+$_item = $block->getItem();
+$product = $_item->getProduct();
+$isVisibleProduct = $product->isVisibleInSiteVisibility();
+/** @var \Magento\Msrp\Helper\Data $helper */
+$helper = $this->helper('Magento\Msrp\Helper\Data');
+$canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinimalPriceLessMsrp($product);
+?>
+<tbody class="cart item">
+    <tr class="item-info">
+
+        <td data-th="<?= $block->escapeHtml(__('Image')) ?>" class="col image-wrap">
+            <div class="actions">
+                <?= /* @escapeNotVerified */ $block->getActions($_item) ?>
+            </div>
+            <div class="images">
+                <a href="<?= /* @escapeNotVerified */ $block->getProductUrl() ?>">
+                    <?php echo $block->getImage($block->getProductForThumbnail(), 'cart_page_product_thumbnail')->toHtml(); ?>
+                </a>
+            </div>
+        </td>
+
+        <td data-th="<?= $block->escapeHtml(__('Item')) ?>" class="col itemlist">
+            <div class="product-item-details">
+                <strong class="product-item-name">
+                    <?php if ($block->hasProductUrl()):?>
+                        <a href="<?= /* @escapeNotVerified */ $block->getProductUrl() ?>"><?= $block->escapeHtml($block->getProductName()) ?></a>
+                    <?php else: ?>
+                        <?= $block->escapeHtml($block->getProductName()) ?>
+                    <?php endif; ?>
+                </strong>
+                <?php if ($messages = $block->getMessages()): ?>
+                    <?php foreach ($messages as $message): ?>
+                        <div class="cart item message <?= /* @escapeNotVerified */ $message['type'] ?>"><div><?= $block->escapeHtml($message['text']) ?></div></div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                <?php $addInfoBlock = $block->getProductAdditionalInformationBlock(); ?>
+                <?php if ($addInfoBlock): ?>
+                    <?= $addInfoBlock->setItem($_item)->toHtml() ?>
+                <?php endif;?>
+            </div>
+        </td>
+
+        <?php if ($_options = $block->getOptionList()):?>
+            <?php foreach ($_options as $_option) : ?>
+                <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
+                <td class="col attr">
+                    <?php if (isset($_formatedOptionValue['full_view'])): ?>
+                        <?= /* @escapeNotVerified */ $_formatedOptionValue['full_view'] ?>
+                    <?php else: ?>
+                        <?= /* @escapeNotVerified */ $_formatedOptionValue['value'] ?>
+                    <?php endif; ?>
+                </td>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <td class="col attr">-</td>
+            <td class="col attr">-</td>
+        <?php endif;?>
+
+      
+        <td class="col qty" data-th="<?= $block->escapeHtml(__('Qty')) ?>">
+            <div class="field qty">
+                <label class="label" for="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty">
+                    <span><?= /* @escapeNotVerified */ __('Qty') ?></span>
+                </label>
+                <div class="control qty">
+                    <input id="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty"
+                           name="cart[<?= /* @escapeNotVerified */ $_item->getId() ?>][qty]"
+                           data-cart-item-id="<?= /* @escapeNotVerified */ $_item->getSku() ?>"
+                           value="<?= /* @escapeNotVerified */ $block->getQty() ?>"
+                           type="number"
+                           size="4"
+                           title="<?= $block->escapeHtml(__('Qty')) ?>"
+                           class="input-text qty"
+                           data-validate="{required:true,'validate-greater-than-zero':true}"    
+                           data-role="cart-item-qty"/>
+
+                    <div class="increment-qty-wrapper">
+                        <span class="increment-qty increment<?php /* @escapeNotVerified */ echo $_item->getId() ?>">+</span>
+                        <span class="increment-qty increment<?php /* @escapeNotVerified */ echo $_item->getId() ?>">-</span>
+                        <script type="text/javascript"> 
+                            require([ 'jquery', 'jquery/ui'], function($){ $(document).ready(function($) {
+                            
+                                jQuery('.increment<?php echo $_item->getId() ?>').click(function(){
+                                    oldVal = jQuery(this).parent().parent().find('input.qty').val();
+
+                                    if (jQuery(this).text() == '+') {
+                                        var newVal = parseFloat(oldVal) + 1;
+                                    } else {
+                                        if (oldVal > 1) {
+                                            var newVal = parseFloat(oldVal) - 1;
+                                        } else {
+                                            newVal = 1;
+                                        }
+                                    }
+                                    jQuery(this).parent().parent().find('input.qty').val(newVal);
+                                    jQuery('#update_cart_action').show();
+                                });
+                            }); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </td>
+
+        <td class="col subtotal" data-th="<?= $block->escapeHtml(__('Subtotal')) ?>">
+            <?php if ($canApplyMsrp): ?>
+                <span class="cart msrp subtotal">--</span>
+            <?php else: ?>
+                <?php 
+                    $normalPrice = $_item->getPrice();
+                    $finalPrice = $_item->getProduct()->getPrice() * $block->getQty();
+                ?>
+                <?php if($finalPrice):?>
+                    <?php if($normalPrice != $finalPrice): ?>
+                    <span class="old-price">
+                        <span class="price">
+                            <?php echo 'IDR ' . number_format($finalPrice, 0, '.', ',');?>
+                        </span>
+                    </span>
+                    <?php endif; ?>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?= $block->getRowTotalHtml($_item) ?>
+        </td>
+    </tr>
+</tbody>

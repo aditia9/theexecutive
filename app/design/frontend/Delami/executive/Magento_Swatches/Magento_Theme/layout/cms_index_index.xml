@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    	<referenceContainer name="page.wrapper">
+    		<container name="mega_banner" as="mega.banner" htmlTag="div" htmlId="mage-banner" after="header_container">
+    			<block class="Magento\Cms\Block\Block" name="homepage-mega-banner">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">homepage-mega-banner</argument>
+                        </arguments>
+                    </block>
+    		</container>
+            <block class="Magento\Framework\View\Element\Template" name="slick.init" after="mega.banner" template="Magento_Theme::html/slick.phtml" />
+    	</referenceContainer>
+    </body>
+</page>

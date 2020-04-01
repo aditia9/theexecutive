@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ranosysconfiguration" translate="label" sortOrder="10">
+            <label>Ranosys</label>
+        </tab> 
+        <section id="fcmnotification" translate="label" sortOrder="160" showInDefault="1">
+            <label>Mobile App Notifications</label>
+            <tab>ranosysconfiguration</tab>
+            <resource>Ranosys_Notification::fcmnotification_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1">
+                <label>General Configuration</label>
+                <field id="enable_cron" translate="label comment" type="select" sortOrder="1" showInDefault="1">
+                    <label>Enable CRON</label>
+                    <comment>Enable/Disable CRON for Sending Notification</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cron_shedule" translate="label comment" type="text" sortOrder="5" showInDefault="1">
+                    <label>Send Notification Cronjob schedule</label>
+                    <comment>Ex: */5 * * * * (once every 5 minutes)</comment>
+                </field>
+                <field id="fcm_server_key" translate="label comment" type="text" sortOrder="20" showInDefault="1">
+                    <label>FCM Server Key</label>
+                    <comment>FCM server key from fcm console to send notification.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

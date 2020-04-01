@@ -1,0 +1,77 @@
+<!--@subject {{trans "%subject" subject=$data.subject}} @-->
+
+{{template config_path="design/email/header_template"}}
+<table class="top-section">
+    <tr>
+        <td class="column-left">
+            <p>{{trans '%customerName' customerName=$data.customerName}},</p>
+            <p>
+                <span>{{trans 'Kontak kami di <a href="mailto:%store_email">%store_email</a>' store_email=$store_email |raw}}</span>
+            </p>
+        </td>
+        <td class="column-right"></td>
+    </tr>
+</table>
+<table class="mid-section">
+    <tr>
+        <td>
+            <h2>{{trans 'Pesanan Anda <span class="no-link">#%increment_id</span>' increment_id=$data.invoiceNo | raw}}</h2>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <p>{{trans "Transaksi Anda sebesar"}} {{trans "<b>Rp %amount</b>" amount=$data.amount | raw}}</p>
+            <p>{{trans "dan silakan melakukan pembayaran dengan nomor rekening Virtual Account BCA: <b>%vaNumber</b>" vaNumber=$data.vaNumber | raw}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><b>{{trans "Cara pembayaran via ATM BCA"}}</b></p>
+            <ol>
+                <li>{{trans "Datang ke ATM BCA terdekat"}}</li>
+                <li>{{trans "Masukkan kartu ATM dan input PIN ATM Anda"}}</li>
+                <li>{{trans 'Pilih menu "Pembayaran Tagihan" kemudian pilih menu "Virtual Account"'}}</li>
+                <li>{{trans 'Masukkan nomor VA / Kode Pembayaran 16 Digit Angka “%vaNumber”' vaNumber=$data.vaNumber}}</li>
+                <li>{{trans "Masukkan nominal pembayaran sesuai dengan yang ditagihkan"}}</li>
+                <li>{{trans 'Halaman konfirmasi, cek kembali untuk “Nama dan Nominal Tagihan” apakah sudah sesuai, lalu tekan Benar/Ok'}}</li>
+                <li>{{trans "Simpan struk transaksi ATM Anda"}}</li>
+            </ol>
+            <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><b>{{trans "Cara pembayaran via m-BCA (BCA Mobile)"}}</b></p>
+            <ol>
+                <li>{{trans "Lakukan log in pada aplikasi BCA Mobile."}}</li>
+                <li>{{trans "Pilih menu m-BCA, kemudian masukkan kode akses m-BCA."}}</li>
+                <li>{{trans 'Pilih m-Transfer > BCA Virtual Account.'}}</li>
+                <li>{{trans 'Masukkan nomor VA / Kode Pembayaran 16 Digit Angka “%vaNumber”' vaNumber=$data.vaNumber}}</li>
+                <li>{{trans "Masukkan nominal pembayaran sesuai dengan yang ditagihkan"}}</li>
+                <li>{{trans 'Masukkan pin m-BCA.'}}</li>
+                <li>{{trans "Pembayaran selesai. Simpan notifikasi yang muncul sebagai bukti pembayaran."}}</li>
+            </ol>
+            <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><b>{{trans "KlikBCA Individual"}}</b></p>
+            <ol>
+                <li>{{trans "Lakukan log in pada aplikasi KlikBCA Individual (https://ibank.klikbca.com/)."}}</li>
+                <li>{{trans "Masukkan User ID dan PIN."}}</li>
+                <li>{{trans 'Pilih Transfer Dana > Transfer ke BCA Virtual Account.'}}</li>
+                <li>{{trans 'Masukkan nomor VA / Kode Pembayaran 16 Digit Angka “%vaNumber”' vaNumber=$data.vaNumber}}</li>
+                <li>{{trans "Masukkan nominal pembayaran sesuai dengan yang ditagihkan"}}</li>
+                <li>{{trans 'Validasi pembayaran.'}}</li>
+                <li>{{trans "Cetak nomor referensi sebagai bukti transaksi Anda."}}</li>
+            </ol>
+            <br />
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

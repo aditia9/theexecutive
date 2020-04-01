@@ -1,0 +1,55 @@
+.columns .column.main.static-page {
+	width: 75%;
+	float: right;
+	.page-title {
+		border-bottom: 1px solid @c-border;
+		.base {
+			font-size: 1.75rem;
+			font-weight: 600;
+		}
+	}
+	p, address {
+		font-size: 1.2rem;
+		margin-bottom: 20px;
+		line-height: 2.5rem;
+	}
+	.accordion-static {
+		dt {
+			border-bottom: 1px dashed lighten(@c-border, 70%);
+			margin-bottom: 10px;
+		    padding-bottom: 10px;
+		    font-size: 1.4rem;
+		    font-weight: 600;
+		    cursor: pointer;
+		    position: relative;
+		    -webkit-user-select: none; /* Chrome/Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+			&:after {
+				content: '\f067';
+				font-family: 'FontAwesome';
+				display: block;
+				float: right;
+				padding-right: 10px;
+			}
+		}
+		dd {
+			font-size: 1.2rem;
+			line-height: 2.5rem;
+			padding-bottom: 30px;
+			-webkit-user-select: none; /* Chrome/Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+		}
+	}
+	.info {
+		margin-bottom: 30px;
+		h5 {
+			font-weight: 600;
+			font-size: 1.5rem;
+		}
+		> p span {
+			display: block;
+		}
+	}
+}
